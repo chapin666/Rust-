@@ -59,6 +59,7 @@ Rust 语言中允许重复定义一个相同变量名的变量。这种重名的
 我们使用一个范例来演示下
 
 ```
+#[allow(unused_variables)]//#[warn(unused_variables)] is default, so we can ignore it
 fn main() {
    let salary = 100.00;
    let salary = 1.50 ; 

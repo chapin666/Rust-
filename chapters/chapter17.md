@@ -127,19 +127,20 @@ Name is :Mohtashim company is TutorialsPoint age is 50
 
 ```
 struct Employee {
-   name:String,
-   company:String,
-   age:u32
+    name:String,
+    company:String,
+    age:u32
 }
 
-let mut emp1 = Employee {
-   company:String::from("TutorialsPoint"),
-   name:String::from("Mohtashim"),
-   age:50
-};
-emp1.age = 40;
-println!("Name is :{} company is {} age is 
-{}",emp1.name,emp1.company,emp1.age);
+fn main() {
+    let mut emp1 = Employee {
+        company:String::from("TutorialsPoint"),
+        name:String::from("Mohtashim"),
+        age:50
+    };
+    emp1.age = 40;
+    println!("Name is :{} company is {} age is {}",emp1.name,emp1.company,emp1.age);
+}
 ```
 
 编译运行以上 Rust 代码，输出结果如下

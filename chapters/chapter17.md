@@ -127,19 +127,20 @@ Name is :Mohtashim company is TutorialsPoint age is 50
 
 ```
 struct Employee {
-   name:String,
-   company:String,
-   age:u32
+    name:String,
+    company:String,
+    age:u32
 }
 
-let mut emp1 = Employee {
-   company:String::from("TutorialsPoint"),
-   name:String::from("Mohtashim"),
-   age:50
-};
-emp1.age = 40;
-println!("Name is :{} company is {} age is 
-{}",emp1.name,emp1.company,emp1.age);
+fn main() {
+    let mut emp1 = Employee {
+        company:String::from("TutorialsPoint"),
+        name:String::from("Mohtashim"),
+        age:50
+    };
+    emp1.age = 40;
+    println!("Name is :{} company is {} age is {}",emp1.name,emp1.company,emp1.age);
+}
 ```
 
 编译运行以上 Rust 代码，输出结果如下
@@ -340,7 +341,7 @@ struct My_struct {}
 impl My_struct { 
 
    //定义一个结构体的普通方法
-   fn method_name([other_parameters]) { 
+   fn method_name(&self[,other_parameters]) { 
       //方法的具体逻辑代码
    }
 }
@@ -362,7 +363,7 @@ struct My_struct {
 impl My_struct { 
 
    //定义一个结构体的普通方法
-   fn method_name([other_parameters]) {
+   fn method_name(&self[,other_parameters]) {
 
       self.age = 28;
 
@@ -460,34 +461,34 @@ impl Structure_Name {
 structure_name::method_name(v1,v2)
 ```
  
-## 17.3 范例
+## 17.7.3 范例
 
 下面的范例，我们为结构体 Point 定义了一个静态方法 getInstance()。
 
 ```
-getInstance() 是一个 工厂方法，它初始化并返回结构体 Point 的实例。
+//getInstance() 是一个 工厂方法，它初始化并返回结构体 Point 的实例。
 
 //声明结构体 Point
 struct Point {
-   x: i32,
-   y: i32,
+    x: i32,
+    y: i32,
 }
 
 impl Point {
-   // 用于创建 Point 实例的静态方法
-   fn getInstance(x: i32, y: i32) -> Point {
-      Point { x: x, y: y }
-   }
-   // 用于显示结构体元素的普通方法
-   fn display(&self){
-      println!("x = {} y = {}",self.x,self.y );
-   }
+    // 用于创建 Point 实例的静态方法
+    fn getInstance(x: i32, y: i32) -> Point {
+        Point { x: x, y: y }
+    }
+    // 用于显示结构体元素的普通方法
+    fn display(&self){
+        println!("x = {} y = {}",self.x,self.y );
+    }
 }
 fn main(){
 
-   // 调用静态方法
-   let p1 = Point::getInstance(10,20);
-   p1.display();
+    // 调用静态方法
+    let p1 = Point::getInstance(10,20);
+    p1.display();
 
 }
 ```

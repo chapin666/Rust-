@@ -59,6 +59,7 @@ Rust 语言中允许重复定义一个相同变量名的变量。这种重名的
 我们使用一个范例来演示下
 
 ```
+#[allow(unused_variables)]//#[warn(unused_variables)] is default, so we can ignore it
 fn main() {
    let salary = 100.00;
    let salary = 1.50 ; 
@@ -120,4 +121,16 @@ fn main() {
    //Error : `NAME` already defined
    println!("改变 name 常量的类型: {}",NAME);
 }
+```
+编译运行以上 Rust 代码，输出结果如下
+```
+error[E0428]: the name `NAME` is defined multiple times
+ --> src/main.rs:3:5
+  |
+2 |     const NAME:&str = "Mohtashim";
+  |     ------------------------------ previous definition of the value `NAME` here
+3 |     const NAME:usize = NAME.len();
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `NAME` redefined here
+  |
+  = note: `NAME` must be defined only once in the value namespace of this block
 ```

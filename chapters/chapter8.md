@@ -104,42 +104,42 @@ Remainder: 0
 
 ```
 fn main() {
-   let A:i32 = 10;
-   let B:i32 = 20;
+    let a: i32 = 10;
+    let b: i32 = 20;
 
-   println!("Value of A:{} ",A);
-   println!("Value of B : {} ",B);
+    println!("Value of a: {}", a);
+    println!("Value of b: {}", b);
 
-   let mut res = A>B ;
-   println!("A greater than B: {} ",res);
+    let mut res = a > b;
+    println!("a greater than b: {}", res);
 
-   res = A<B ;
-   println!("A lesser than B: {} ",res) ;
+    res = a < b;
+    println!("a lesser than b: {}", res);
 
-   res = A>=B ;
-   println!("A greater than or equal to B: {} ",res);
+    res = a >= b;
+    println!("a greater than or equal to b: {}", res);
 
-   res = A<=B;
-   println!("A lesser than or equal to B: {}",res) ;
+    res = a <= b;
+    println!("a lesser than or equal to b: {}", res);
 
-   res = A==B ;
-   println!("A is equal to B: {}",res) ;
+    res = a == b;
+    println!("a is equal to b: {}", res);
 
-   res = A!=B ;
-   println!("A is not equal to B: {} ",res);
+    res = a != b;
+    println!("a is not equal to b: {}", res);
 }
 ```
 
 编译运行以上 Rust 代码，输出结果如下
 ```
-Value of A:10
-Value of B : 20
-A greater than B: false
-A lesser than B: true
-A greater than or equal to B: false
-A lesser than or equal to B: true
-A is equal to B: false
-A is not equal to B: true
+Value of a: 10
+Value of b: 20
+a greater than b: false
+a lesser than b: true
+a greater than or equal to b: false
+a lesser than or equal to b: true
+a is equal to b: false
+a is not equal to b: true
 ```
 
 ## 8.3 逻辑运算符

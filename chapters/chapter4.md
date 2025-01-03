@@ -258,9 +258,10 @@ fn main() {
 }
 ```
 
-编译运行以上 Rust 代码，报错信息如下
+编译运行以上 Rust 代码，输出信息如下
 
 ```
+result value is 10
 interest is 8.35
 cost is 15000.6
 ```

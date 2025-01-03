@@ -121,8 +121,8 @@ enum Fruits {
 }
 
 fn main() {
-   let selected = Fruits::Banana;
-   println!("{:?}",selected);
+    let selected = Fruits::Banana;
+    println!("{:?}",selected);
 }
 ```
 

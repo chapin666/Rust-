@@ -97,7 +97,7 @@ fn main(){
 
 ```
 长度是 0
-长度是 12
+长度是 15
 ```
 
 The above example creates two strings − an empty string object using the new method and a string object from string literal using the from method.

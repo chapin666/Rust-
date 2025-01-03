@@ -113,6 +113,7 @@ println!() 用于输出枚举。
 
 ```
 #[derive(Debug)]
+#[allow(dead_code)]
 enum Fruits {
     Banana,     // 香蕉
     Pear,       // 梨
@@ -121,8 +122,8 @@ enum Fruits {
 }
 
 fn main() {
-   let selected = Fruits::Banana;
-   println!("{:?}",selected);
+    let selected = Fruits::Banana;
+    println!("{:?}",selected);
 }
 ```
 
